@@ -1,0 +1,52 @@
+/* Structure */
+body {
+    background:url(images/pinkbluebackground.webp);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#content {
+    background: white;
+    width: 70%;
+    margin:auto; /* center */
+    padding:5px;
+    border:1px solid lightpink;
+    border-radius:5px; /* curved border */
+    box-shadow: 10px 10px thistle;
+}
+
+header, footer {
+    background:lavenderblush;
+    padding:5px;
+    color:navy;
+    
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left:0; /*remove the padding indent */
+}
+#main-nav li {
+    list-style-type: none; /* remove the bullets */
+    display:inline-block;
+}
+
+#main-nav a {
+    color:palevioletred; /*target the anchor link color */
+    text-decoration: none; /* remove the underlines */
+    border-bottom:1px solid transparent; /* ensures no movement from hover */
+}
+
+#main-nav a:hover {
+    color:navy;
+    border-bottom: 1px solid navy;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+}
+
+footer p {
+    text-align:center;
+}
