@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(255, 229, 233);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    margin:0;
+    padding:0;
+    text-align: center;
+    color:rgb(255, 100, 124);
+}
+
+header {
+    text-align: center;
+}
+
+#opening {
+    background: rgb(255, 255, 255);
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#name {
+    text-align:center;
+    color:darkorange;
+}
+
+#course-description {
+    text-align:center;
+    color:rgb(255, 154, 169);
+
+}
+#assignments-header {
+    text-align: center;
+    color:rgb(255, 108, 63);
+}
+
+#assignment-links {
+    text-align: center;
+    padding:0;
+    list-style-type: none;
+}
+#assignment-links li {
+    margin: 10px;
+}
+#assignment-links a {
+    text-decoration: none;
+    color:rgb(250, 186, 77);
+}
+#assignment-links a:hover {
+    color:rgb(255, 230, 131);
+}
+

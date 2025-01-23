@@ -1,0 +1,106 @@
+/* Structure */
+body {
+    background:url(images/mutedbiferry.jpg);
+    background-size:200%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:smaller;
+
+}
+
+#content {
+    background: white;
+    width: 70%;
+    margin:auto; /* center */
+    padding:10px;
+    border:1px solid deepskyblue;
+    border-radius:5px; /* curved border */
+    box-shadow: 10px 10px tan;
+}
+
+header {
+    background:url(images/biheader.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    padding:30px;
+    color:navy;
+}
+
+footer {
+    background:url(images/birocks.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:30px;
+    color:darkgray;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+    font-size: xx-large;
+}
+h2 {
+    color:lightseagreen;
+}
+footer p {
+    text-align: center;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left:0; /*remove the padding indent */
+    text-align: center;
+}
+#main-nav li {
+    list-style-type: none; /* remove the bullets */
+    display:inline-block;
+}
+
+#main-nav a {
+    color:darkblue; /*target the anchor link color */
+    text-decoration: none; /* remove the underlines */
+    border-bottom:1px solid transparent; /* ensures no movement from hover */
+   
+}
+
+#main-nav a:hover {
+    color:rgb(255, 238, 142);
+    border-bottom: 1px solid navy;
+}
+
+/* Table */
+table {
+    width: 50%;
+    background:seashell;
+}
+
+th {
+    background-color: steelblue;
+    color: white;
+}
+
+th, td {
+    border: 1px solid steelblue;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Image Formatting*/
+.logo {
+    width: 75px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.map {
+    width: 50%;
+    height: auto;
+    display:block;
+    margin-right: 5px;
+    border-image: 1px solid steelblue;
+}
+
+.table-map {
+    display: flex;
+    gap: 16px
+}
