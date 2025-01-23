@@ -9,6 +9,7 @@ body {
 
 #content {
     background: white;
+    color:rgb(102, 119, 136);
     width: 70%;
     margin:auto; /* center */
     padding:10px;
@@ -41,6 +42,9 @@ header h1 {
 }
 h2 {
     color:lightseagreen;
+    text-align: center;
+    padding-bottom: 5px;
+
 }
 footer p {
     text-align: center;
@@ -50,10 +54,12 @@ footer p {
 #main-nav ul {
     padding-left:0; /*remove the padding indent */
     text-align: center;
+
 }
 #main-nav li {
     list-style-type: none; /* remove the bullets */
     display:inline-block;
+    padding: 3px;
 }
 
 #main-nav a {
@@ -64,8 +70,8 @@ footer p {
 }
 
 #main-nav a:hover {
-    color:rgb(255, 238, 142);
-    border-bottom: 1px solid navy;
+    color:lightseagreen;
+    border-bottom: 1px solid lightseagreen;
 }
 
 /* Table */
@@ -89,6 +95,7 @@ th, td {
 .logo {
     width: 75px;
     margin-left: 10px;
+    padding-right: 10px;
     vertical-align: middle;
 }
 
@@ -101,6 +108,8 @@ th, td {
 }
 
 .table-map {
+    padding-top: 2px;
+    padding-bottom: 10px;
     display: flex;
     gap: 16px
 }
