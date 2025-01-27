@@ -1,0 +1,169 @@
+/* Structure */
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(200, 169, 122);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(92, 47, 15);
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+h2 {
+    text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.main-nav li a:hover {
+    background: white;
+    color: rgb(92, 47, 15);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}
+
+.content {
+    flex: 2;
+}
+
+.content article {
+    background-color: bisque;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(98, 94, 94);
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+}
+
+.content img {
+    width: 200px;
+    max-width: 200px;
+    margin: 15px 0;
+    object-fit: cover;
+}
+
+.links {
+    flex: 1;
+    background-color: rgb(200, 169, 122);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(98, 94, 94);
+    text-align: center;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(92, 47, 15);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Smaller mobile Screens */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .main-nav li a {
+        padding: 8px 12px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+/* Larger Screens */
+@media (min-width: 900px) {
+    .main-nav {
+        justify-content: space-around;
+    }
+
+    .content {
+        flex: 2;
+    }
+
+    .content article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .links {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    main {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+}
