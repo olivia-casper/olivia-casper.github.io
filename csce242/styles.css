@@ -1,7 +1,6 @@
 body {
     background-color: rgb(255, 229, 233);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-size: cover;
     margin:0;
     padding:0;
     text-align: center;
@@ -9,45 +8,83 @@ body {
 }
 
 header {
-    text-align: center;
-}
-
-#opening {
-    background: rgb(255, 255, 255);
-    margin: auto;
+    background-color:rgb(255, 154, 169);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
 }
 
-#name {
-    text-align:center;
-    color:darkorange;
+main {
+    padding: 20px;
 }
 
 #course-description {
-    text-align:center;
-    color:rgb(255, 154, 169);
-
-}
-#assignments-header {
-    text-align: center;
-    color:rgb(255, 108, 63);
+    margin-bottom: 20px;
+    color: rgb(255, 132, 0);
 }
 
-#assignment-links {
+/* Assignments */
+#assignments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#assignments article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
-    padding:0;
-    list-style-type: none;
+    width: 300px;
 }
-#assignment-links li {
-    margin: 10px;
+
+#assignments img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
 }
-#assignment-links a {
+
+#assignments h3 {
+    color: rgb(255, 108, 63);
+    margin: 10px 0;
+}
+
+#assignments p {
+    color: rgb(158, 75, 52);
+    margin-bottom: 15px;
+}
+
+#assignments a {
     text-decoration: none;
-    color:rgb(250, 186, 77);
-}
-#assignment-links a:hover {
-    color:rgb(255, 230, 131);
+    color: rgb(255, 131, 114);
+    font-weight: bold;
 }
 
+#assignments a:hover {
+    color: rgb(255, 189, 91);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(255, 154, 169);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #assignments {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #assignments article {
+        width: 100%;
+    }
+}
