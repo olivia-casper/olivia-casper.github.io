@@ -1,3 +1,4 @@
+
 /* Structure */
 body {
     background:#CDECEF;
@@ -62,33 +63,6 @@ main {
     padding:5px;
 }
 
-/* Animations */
-#animation-fun {
-    background:#a0ccd8;
-    padding:20px;
-    height:200px;
-    position:relative;
-}
-
-#ball {
-    height: 30px;
-    width:30px;
-    background:blue;
-    border-radius:50px;
-    animation-name: fun;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fun {
-    0% {background-color: red;}
-    20% {background-color: orange;}
-    40% {background-color: yellow;}
-    60% {background-color:aqua;}
-    70% {background-color: green;}
-    80% {background-color: indigo;}
-    100% {background-color: violet;}
-  }
 
 /* Playing with positioning */
 #main-logo {
