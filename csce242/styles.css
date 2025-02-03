@@ -9,63 +9,68 @@ body {
 
 header {
     background-color:rgb(255, 154, 169);
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
     color: white;
 }
 
-main {
-    padding: 20px;
-}
-
 #course-description {
-    margin-bottom: 20px;
+    margin-bottom: 15px 0;
     color: rgb(255, 132, 0);
 }
 
-/* Assignments */
-#assignments {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* Section Container */
+.section-container {
+    margin: 10x auto;
+    padding: 10px;
+    max-width: 1200px;
 }
 
-#assignments article {
+/* Card Container for Assignments and Projects */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
     padding: 15px;
     text-align: center;
-    width: 300px;
+    width: 280px;
 }
 
-#assignments img {
+/* Images */
+.card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
-
 }
 
-#assignments h3 {
+/* Headings & Links */
+.card h3 {
     color: rgb(255, 108, 63);
     margin: 10px 0;
 }
 
-#assignments p {
+.card p {
     color: rgb(158, 75, 52);
     margin-bottom: 15px;
 }
 
-#assignments a {
+.card a {
     text-decoration: none;
     color: rgb(255, 131, 114);
     font-weight: bold;
 }
 
-#assignments a:hover {
+.card a:hover {
     color: rgb(255, 189, 91);
 }
 
@@ -79,12 +84,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #assignments {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    #assignments article {
-        width: 100%;
+    .card-container {
+        grid-template-columns: 1fr;
     }
 }
