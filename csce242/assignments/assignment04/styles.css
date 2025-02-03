@@ -127,6 +127,8 @@ body {
     max-width: 800px;
     margin: 0 auto 20px;
     font-size: 1rem;
+    color: #000000;
+    font-weight: lighter;
 }
 
 .feature-bits {
@@ -153,6 +155,11 @@ body {
     margin: 10px 0;
     color: #73000A;
     font-weight: bold;
+}
+
+.bit p {
+    color:#000000;
+    font-weight: lighter;
 }
 
 /* News Section */
@@ -201,6 +208,7 @@ body {
 
 .news-item p {
     color:#000000;
+
 }
 .news-content h3 {
     color: #73000A;
@@ -209,6 +217,7 @@ body {
 
 .news-content p {
     margin: 5px 0 0;
+    font-weight: lighter;
 }
 
 /* Footer Section */
@@ -375,6 +384,16 @@ body {
         padding: 8px 80px; 
         height: 45px;
     }
+    .footer-columns {
+        flex-wrap: nowrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .footer-sub-columns {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -408,6 +427,16 @@ body {
     .red-banner {
         padding: 6px 40px;   
         height: 40px;
+    }
+    .footer-columns {
+        flex-wrap: nowrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .footer-sub-columns {
+        flex-direction: row;
+        align-items: center;
     }
 }
 
