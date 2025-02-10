@@ -3,6 +3,7 @@
 
 /* Custom Bottom Content Layout */
 .bottom-content {
+    padding-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,4 +13,9 @@
 .bottom-content img {
     max-width: 150px;
     width: 40%;
+}
+
+.center-section {
+    padding-top: 0;
+    text-align: center;
 }

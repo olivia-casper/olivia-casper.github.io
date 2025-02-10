@@ -4,6 +4,13 @@ body {
     background: var(--light-grey);;
 }
 
+/* Fake Browser Bar */
+.top-bar {
+    background: var(--light-grey);
+    height: 30px;
+    width: 100%;
+}
+
 /* Page Layout */
 .predictions-container {
     text-align: center;

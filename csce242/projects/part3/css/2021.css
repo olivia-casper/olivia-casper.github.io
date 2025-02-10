@@ -1,0 +1,15 @@
+/* Ensure the list container is centered */
+.styled-list {
+    text-align: center;  /* Centers text inside */
+    width: fit-content;  /* Shrinks width to content size */
+    margin: 0 auto;  /* Centers the list horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Align nested list items properly */
+.styled-list li {
+    text-align: left; /* Keeps sub-items readable */
+    width: 100%; /* Ensures items take up full width */
+}
