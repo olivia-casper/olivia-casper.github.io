@@ -38,13 +38,14 @@ nav ul li a {
     height: 100px;
 }
 
-/* Three Boxes Layout */
+/* Three Boxes Layout :| */
 .content {
     display: flex;
     gap: 20px;
     padding: 20px;
     justify-content: center;
     background: var(--light-grey);
+    flex-wrap: wrap;
 }
 
 .box {
@@ -53,7 +54,15 @@ nav ul li a {
     border-radius: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.428);
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+.box p {
+    padding: 10px;
+    line-height: 1.5;
+    flex-grow: 1; 
 }
 
 /* Header inside the Box */
@@ -103,13 +112,10 @@ nav ul li a {
     .hero img {
         height: 500px;
     }
-
-    .content {
-        gap: 15px;
-    }
-
-    .box {
-        width: 28%;
+    content {
+        flex-direction: column; 
+        align-items: center; 
+        width:80%;
     }
 }
 
@@ -117,13 +123,10 @@ nav ul li a {
     .hero img {
         height: 400px;
     }
-
     .content {
-        gap: 10px;
-    }
-
-    .box {
-        width: 26%;
+        flex-direction: column; 
+        align-items: center;
+        width:90%;
     }
 }
 
@@ -131,12 +134,9 @@ nav ul li a {
     .hero img {
         height: 300px;
     }
-
     .content {
-        gap: 5px;
-    }
-
-    .box {
-        width: 24%;
+        flex-direction: column; 
+        align-items: center;
+        width:95%;
     }
 }
