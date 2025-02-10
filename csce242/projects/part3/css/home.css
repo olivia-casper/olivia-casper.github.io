@@ -44,6 +44,7 @@ nav ul li a {
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    background: var(--light-grey);
 }
 
 .box {
