@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:#333;
+    color: var(--dark-grey);
     text-decoration:underline;
 }
 
@@ -43,16 +43,16 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    color:#000;
+    color: var(--black);
 }
 
 .pagination a {
-    color:#000;
+    color: var(--black);
     text-decoration: none;
 }
 
 .prev, .next {
-    background: white;
+    background: var(--white);
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;

@@ -1,0 +1,14 @@
+@import "years.css";
+
+/* Custom Bottom Content Layout */
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottom-content img {
+    max-width: 220px;
+    width: 60%;
+}

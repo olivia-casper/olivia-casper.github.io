@@ -1,0 +1,15 @@
+@import "years.css";
+
+
+/* Custom Bottom Content Layout */
+.bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* spacing between bullet list and image */
+}
+
+.bottom-content img {
+    max-width: 150px;
+    width: 40%;
+}

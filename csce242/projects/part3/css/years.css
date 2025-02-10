@@ -1,19 +1,24 @@
 @import "styles.css";
 
 body {
-    background: #eee;
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100;
+    overflow-x: hidden; 
 }
 
 /* Header */
 
 title {
-    color:#444;
+    color: var(--dark-grey);
     padding-bottom: 10px;
     padding-top: 0px;
 }
 
 nav ul li a {
-    color: #444;
+    color: var(--dark-grey);
 }
 
 header {
@@ -24,16 +29,18 @@ header {
 .year-container {
     text-align: center;
     padding: 10px;
-    padding-top: 50;
+    padding-top: 50px;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .year-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    align-items: stretch;  
     width: 100%;
     max-width: 1200px;
+    height: 75; 
     margin: 0 auto;
 }
 
@@ -42,6 +49,10 @@ header {
     background: #444;
     padding: 20px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .frame {
@@ -49,6 +60,10 @@ header {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .frame img {
@@ -57,38 +72,79 @@ header {
     margin-bottom: 10px;
 }
 
+/* Center Section */
+.center-section {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom-content {
+    margin-top: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-content img {
+    max-width: 250px;
+    width: 80%;
+}
+
 /* Pagination */
 .pagination {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
-    left: 0;
+    margin-top: auto;
     bottom: 0;
+    position: relative;
 }
 
 .prev, .next {
-    background: white;
+    background: var(--white);
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
-    color: #444;
+    color: var(--dark-grey);
 }
 
+
+/* Scaling Instead of Switching to Columns */
 @media (max-width: 1200px) {
-    .year-container {
-        transform: scale(0.9);
+    .year-content {
+        width: 95%;
+        height: 70vh;
+    }
+    .pagination {
+        max-width: 700px;
     }
 }
 
 @media (max-width: 900px) {
-    .year-container {
-        transform: scale(0.8);
+    .year-content {
+        width: 90%;
+        height: 65vh;
+    }
+    .pagination {
+        max-width: 600px;
     }
 }
 
 @media (max-width: 600px) {
-    .year-container {
-        transform: scale(0.7);
+    .year-content {
+        width: 85%;
+        height: 60vh;
+    }
+    .pagination {
+        max-width: 500px;
     }
 }
-

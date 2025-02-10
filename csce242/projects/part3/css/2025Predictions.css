@@ -1,7 +1,7 @@
 @import "styles.css";
 
 body {
-    background: #eee;
+    background: var(--light-grey);;
 }
 
 /* Page Layout */
@@ -23,7 +23,7 @@ body {
 /* Polaroid Effect */
 .polaroid {
     position: absolute;
-    background: #222;
+    background: var(--dark-grey);;
     padding: 10px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -39,8 +39,8 @@ body {
 
 /* Caption inside Polaroid */
 .caption {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     padding: 5px;
     display: block;
 }
@@ -57,7 +57,7 @@ body {
 /* Heart Icon (Fix Bottom-Left Positioning) */
 .heart {
     font-size: 1vw;
-    color: white;
+    color: var(--white);
     margin-left: 5px;  /* Keep it away from the edge */
     text-align: left;
 }
