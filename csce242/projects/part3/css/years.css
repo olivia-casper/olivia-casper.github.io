@@ -144,6 +144,14 @@ header {
     color: var(--dark-grey);
 }
 
+.prev {
+    margin-left: 20px;
+}
+
+.next {
+    margin-right: 20px;
+}
+
 
 /* Scaling Instead of Switching to Columns */
 @media (max-width: 1200px) {

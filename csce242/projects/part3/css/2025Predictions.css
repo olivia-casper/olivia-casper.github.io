@@ -2,6 +2,7 @@
 
 body {
     background: var(--light-grey);
+    overflow-x: hidden;
 }
 
 /* Fake Browser Bar */
@@ -18,18 +19,17 @@ body {
     font-size: 14px;
     padding-bottom: 0;
     padding-top: 5px;
+    justify-content: center;
+    text-align: center;
 }
 
 .pagination {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 30px;
     margin-top: auto;
     bottom: 0;
-    position: relative;
-    
 }
 
 .prev, .next {
@@ -40,6 +40,9 @@ body {
     color: var(--dark-grey);
 }
 
+.next {
+    margin-right: 60px;
+}
 nav ul li a {
     color: var(--dark-grey);
 }
@@ -78,7 +81,7 @@ nav ul li a {
     transform: rotate(var(--rotation));
 }
 
-/* Image inside Polaroid */
+/* Image inside polaroid */
 .polaroid img {
     display: block;
     width: 200px;
@@ -102,11 +105,11 @@ nav ul li a {
     display: block;
 }
 
-/* Heart Icon (Fix Bottom-Left Positioning) */
+/* Heart Icon */
 .heart {
     font-size: 1vw;
     color: var(--white);
-    margin-left: 5px;  /* Keep it away from the edge */
+    margin-left: 5px;  
     text-align: left;
 }
 

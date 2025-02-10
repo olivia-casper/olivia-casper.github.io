@@ -26,8 +26,8 @@ header, footer {
 }
 
 header {
-   /* position:fixed;
-    width:70%;*/
+   position:fixed;
+    width:70%;
 }
 
 main {
