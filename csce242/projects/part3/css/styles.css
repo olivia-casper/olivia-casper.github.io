@@ -1,0 +1,104 @@
+/* Global Styles for Every Page */
+:root {
+    --dark-grey: #333;
+    --light-grey: #eee;
+    --white: #fff;
+    --black: #000;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light-grey);
+    color: var(--dark-grey);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navigation */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color:#333;
+    text-decoration:underline;
+}
+
+/* Pagination Buttons (Previous & Next) */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color:#000;
+}
+
+.pagination a {
+    color:#000;
+    text-decoration: none;
+}
+
+.prev, .next {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+
+/* Responsive Scaling (Avoid Vertical Stacking) */
+@media (max-width: 1200px) {
+    body {
+        font-size: 90%;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .pagination {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 80%;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .pagination {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 70%;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .pagination {
+        font-size: 70%;
+    }
+}

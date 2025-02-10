@@ -1,0 +1,131 @@
+@import "styles.css";
+
+/* Fake Browser Bar */
+.top-bar {
+    background: #ccc;
+    height: 30px;
+    width: 100%;
+}
+
+/* Header */
+
+header {
+    background: var(--dark-grey);
+    color: white;
+}
+
+/* Nav */
+nav ul li a {
+    color: white;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Below Hero Section */
+.below-hero {
+    background: var(--dark-grey);
+    height: 100px;
+}
+
+/* Three Boxes Layout */
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.box {
+    width: 30%;
+    background: #bbb;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header inside the Box */
+.box-header {
+    background: #ddd;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0;
+}
+
+.box.right, .box.left {
+    width: 30%;
+}
+
+.box.right {
+    text-align: right;
+    padding: 2px;
+}
+
+.box.left {
+    text-align: left;
+    padding: 2px;
+}
+
+.box.center {
+    padding: 20px;
+}
+
+.box.center img {
+    display: block;
+    width: 100%;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1200px) {
+    .hero img {
+        height: 500px;
+    }
+
+    .content {
+        gap: 15px;
+    }
+
+    .box {
+        width: 28%;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero img {
+        height: 400px;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .box {
+        width: 26%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero img {
+        height: 300px;
+    }
+
+    .content {
+        gap: 5px;
+    }
+
+    .box {
+        width: 24%;
+    }
+}

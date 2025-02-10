@@ -272,12 +272,13 @@ body {
     color: #FFFFFF;
     display:flex;
     justify-content: center;
+    text-align: center;
 }
 
 .garnet-footer-container {
     display: flex;
-    align-items: flex-start;
-    gap:40px;
+    align-items: center;
+    gap:20px;
     max-width:1200px;
     width: 100%
 }
@@ -347,10 +348,15 @@ body {
     font-size: 12px;
 }
 
+.black-footer p {
+    color:#FFFFFF;
+}
+
 .black-footer a {
     color: #FFFFFF;
     text-decoration: none;
     margin: 0 5px;
+    font-weight: lighter;
 }
 
 /* Responsive Design */

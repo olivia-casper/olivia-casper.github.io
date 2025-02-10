@@ -1,0 +1,111 @@
+@import "styles.css";
+
+body {
+    background: #eee;
+}
+
+/* Page Layout */
+.predictions-container {
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    height: 700px; 
+    justify-self: auto;
+}
+
+/* Polaroid Wrapper */
+.polaroid-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Polaroid Effect */
+.polaroid {
+    position: absolute;
+    background: #222;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transform: rotate(var(--rotation));
+}
+
+/* Image inside Polaroid */
+.polaroid img {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+/* Caption inside Polaroid */
+.caption {
+    background: black;
+    color: white;
+    padding: 5px;
+    display: block;
+}
+
+.caption p {
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 100%;
+    display: block;
+}
+
+/* Heart Icon (Fix Bottom-Left Positioning) */
+.heart {
+    font-size: 1vw;
+    color: white;
+    margin-left: 5px;  /* Keep it away from the edge */
+    text-align: left;
+}
+
+/* Staggered Polaroid Positioning */
+.polaroid-1 { left: 5%; top: 5%; transform: rotate(-8deg); }
+.polaroid-2 { left: 35%; top: 10%; transform: rotate(6deg); }
+.polaroid-3 { left: 65%; top: 20%; transform: rotate(-10deg); }
+.polaroid-4 { left: 20%; top: 55%; transform: rotate(7deg); }
+.polaroid-5 { left: 50%; top: 50%; transform: rotate(-5deg); }
+
+
+@media (max-width: 1200px) {
+    .polaroid-wrapper {
+        transform: scale(0.9);
+    }
+    .polaroid img { width: 180px; }
+
+    .polaroid-1 { left: 5%; top: 5%; }
+    .polaroid-2 { left: 30%; top: 12%; }
+    .polaroid-3 { left: 60%; top: 18%; }
+    .polaroid-4 { left: 15%; top: 50%; }
+    .polaroid-5 { left: 45%; top: 45%; }
+}
+
+
+@media (max-width: 900px) {
+    .polaroid-wrapper {
+        transform: scale(0.9);
+    }
+    .polaroid img { width: 150px; }
+
+    .polaroid-1 { left: 3%; top: 8%; }
+    .polaroid-2 { left: 28%; top: 10%; }
+    .polaroid-3 { left: 55%; top: 15%; }
+    .polaroid-4 { left: 10%; top: 45%; }
+    .polaroid-5 { left: 40%; top: 40%; }
+}
+
+@media (max-width: 600px) {
+    .polaroid-wrapper {
+        transform: scale(0.9);
+    }
+    .polaroid img { width: 120px; }
+
+    .polaroid-1 { left: 2%; top: 5%; }
+    .polaroid-2 { left: 25%; top: 8%; }
+    .polaroid-3 { left: 50%; top: 12%; }
+    .polaroid-4 { left: 8%; top: 40%; }
+    .polaroid-5 { left: 38%; top: 35%; }
+}
