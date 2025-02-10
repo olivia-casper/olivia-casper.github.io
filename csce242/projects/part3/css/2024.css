@@ -1,6 +1,5 @@
 @import "years.css";
 
-/* Custom Bottom Content Layout */
 .bottom-content {
     display: flex;
     flex-direction: column;

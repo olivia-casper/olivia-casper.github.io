@@ -1,0 +1,24 @@
+.graph-container img {
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .graph-container img {
+        width: 95%;
+        height: 110px;
+    }
+}
+
+@media (max-width: 900px) {
+    .graph-container img {
+        width: 90%;
+        height: 110px;
+    }
+}
+
+@media (max-width: 600px) {
+    .graph-container img {
+        width: 85%;
+        height: 110px;
+    }
+}

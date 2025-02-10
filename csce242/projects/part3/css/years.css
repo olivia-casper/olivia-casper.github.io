@@ -57,19 +57,19 @@ header {
 
 .side {
     width: 25%;
-    background: var(--dark-grey);
+    background: var(--med-grey);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 
 }
 
 .frame {
     background: var(--light-grey);
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
     flex-grow: 1; 
     display: flex;
@@ -81,6 +81,12 @@ header {
     width: 100%;
     border-radius: 10px;
     flex-grow: 1;
+}
+
+.frame p {
+    background-color: var(--med-grey);
+    background-size:auto;
+
 }
 
 /* Center Section */

@@ -1,7 +1,7 @@
 @import "styles.css";
 
 body {
-    background: var(--light-grey);;
+    background: var(--light-grey);
 }
 
 /* Fake Browser Bar */
@@ -9,6 +9,35 @@ body {
     background: var(--light-grey);
     height: 30px;
     width: 100%;
+    bottom: 0;
+}
+
+.likefavs {
+    color: var(--dark-grey);
+    font-family: cursive;
+    font-size: 14px;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    margin-top: auto;
+    bottom: 0;
+    position: relative;
+    
+}
+
+.prev, .next {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--dark-grey);
 }
 
 nav ul li a {

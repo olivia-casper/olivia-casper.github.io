@@ -1,15 +1,46 @@
-/* Ensure the list container is centered */
 .styled-list {
-    text-align: center;  /* Centers text inside */
-    width: fit-content;  /* Shrinks width to content size */
-    margin: 0 auto;  /* Centers the list horizontally */
+    text-align: center;  
+    width: fit-content;  
+    margin: 0 auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Align nested list items properly */
 .styled-list li {
     text-align: left; /* Keeps sub-items readable */
-    width: 100%; /* Ensures items take up full width */
+    width: 100%; 
+}
+
+@media (max-width: 1200px) {
+    .year-content {
+        width: 95%;
+        height: 70vh;
+    }
+    .center-section p li {
+        font-size: xx-small;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .year-content {
+        width: 90%;
+        height: 65vh;
+    }
+    .center-section p li {
+        font-size: xx-small;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .year-content {
+        width: 85%;
+        height: 60vh;
+    }
+    .center-section p li {
+        font-size: xx-small;
+        text-align: center;
+    }
 }

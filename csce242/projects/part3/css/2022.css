@@ -1,7 +1,5 @@
 @import "years.css";
 
-
-/* Custom Bottom Content Layout */
 .bottom-content {
     padding-top: 0;
     display: flex;
@@ -18,4 +16,9 @@
 .center-section {
     padding-top: 0;
     text-align: center;
+    justify-content: center;
+}
+
+.year-container {
+    justify-content: center;
 }
