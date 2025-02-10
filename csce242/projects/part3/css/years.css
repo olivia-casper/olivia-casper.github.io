@@ -29,9 +29,12 @@ header {
 
 .year-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .side {
@@ -59,6 +62,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    left: 0;
+    bottom: 0;
 }
 
 .prev, .next {
@@ -68,3 +73,22 @@ header {
     font-weight: bold;
     color: #444;
 }
+
+@media (max-width: 1200px) {
+    .year-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 900px) {
+    .year-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 600px) {
+    .year-container {
+        transform: scale(0.7);
+    }
+}
+
