@@ -15,10 +15,6 @@ nav ul li a {
     color: var(--dark-grey);
 }
 
-header {
-    padding-bottom: 0px;
-}
-
 /* Page Layout */
 .predictions-container {
     text-align: center;
@@ -26,6 +22,8 @@ header {
     position: relative;
     height: 700px; 
     justify-self: auto;
+    padding-top: 0;
+
 }
 
 .predictions-container h1 {
