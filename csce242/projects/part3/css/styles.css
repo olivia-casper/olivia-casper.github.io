@@ -1,6 +1,7 @@
 /* Global Styles for Every Page */
 :root {
     --dark-grey: #333;
+    --med-grey: #c9c9c9;
     --light-grey: #eee;
     --white: #fff;
     --black: #000;
@@ -34,7 +35,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--dark-grey);
+    color: var(--white);
     text-decoration:underline;
 }
 
