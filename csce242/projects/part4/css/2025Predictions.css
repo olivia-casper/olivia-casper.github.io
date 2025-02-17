@@ -12,6 +12,10 @@ body {
     bottom: 0;
 }
 
+nav ul li a {
+    color: var(--dark-grey);
+}
+
 .likefavs {
     color: var(--dark-grey);
     font-family: cursive;
