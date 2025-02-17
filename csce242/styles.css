@@ -5,6 +5,7 @@ body {
     padding:0;
     text-align: center;
     color:rgb(255, 100, 124);
+    font-size: larger;
 }
 
 header {
@@ -37,7 +38,7 @@ header {
 .card-container {
     display: flex;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 60px;
     justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
@@ -50,7 +51,8 @@ header {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
     padding: 15px;
     text-align: center;
-    width: 280px;
+    width: 300px;
+    min-height: 300px;
 }
 
 /* Images */
@@ -75,6 +77,7 @@ header {
 .card h3 {
     color: rgb(255, 108, 63);
     margin: 10px 0;
+    padding-top: 10px;
 }
 
 .card p {

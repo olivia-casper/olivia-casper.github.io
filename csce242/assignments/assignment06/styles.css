@@ -18,6 +18,10 @@ h2 {
     color: #d48888;
 }
 
+footer {
+    color: #4a7478;
+}
+
 /* Full screen nav */
 .nav-fullscreen {
     display: flex;
@@ -152,7 +156,7 @@ button {
         text-align: left;
     }
 
-    h1, h2 {
+    h1, h2, footer {
         text-align: center;
     }
 
