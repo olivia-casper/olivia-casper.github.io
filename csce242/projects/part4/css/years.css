@@ -17,7 +17,6 @@ body {
 }
 
 /* Header */
-
 title {
     color: var(--dark-grey);
     padding-bottom: 10px;
@@ -145,8 +144,7 @@ header {
 
 
 
-/* Responsive Scaling */
-
+/* Responsiveness */
 @media (max-width: 768px) {
     .year-content {
         flex-direction: column;

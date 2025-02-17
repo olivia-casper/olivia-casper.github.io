@@ -10,7 +10,7 @@
 }
 
 .styled-list li {
-    text-align: left; /* Keeps sub-items readable */
+    text-align: left; 
     width: 100%; 
 }
 

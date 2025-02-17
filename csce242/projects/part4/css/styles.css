@@ -92,7 +92,7 @@ nav ul li a:hover {
     }
 }
 
-/* Responsive Styles */
+/* Responsiveness */
 @media (max-width: 768px) {
     /* Show hamburger button */
     .menu-toggle {
