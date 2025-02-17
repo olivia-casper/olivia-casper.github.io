@@ -1,7 +1,6 @@
 @import "styles.css";
 
 body {
-    background: var(--light-grey);
     overflow-x: hidden;
 }
 
@@ -42,9 +41,6 @@ body {
 
 .next {
     margin-right: 60px;
-}
-nav ul li a {
-    color: var(--dark-grey);
 }
 
 /* Page Layout */

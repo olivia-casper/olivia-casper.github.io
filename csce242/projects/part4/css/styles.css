@@ -72,14 +72,13 @@ nav ul li a:hover {
 .menu-toggle {
     display: none;
     font-size: 30px;
-    background: none;
     border: none;
-    color: var(--dark-grey);
+    color: var(--darkpink);
     cursor: pointer;
     position: absolute;
     top: 10px;
     left: 20px;
-    z-index: 1000;
+
 }
 
 @media (max-width: 900px) {
@@ -104,15 +103,18 @@ nav ul li a:hover {
     /* Hide navigation links by default */
     .nav-links {
         flex-direction: column;
-        background-color: var(--white);
+        background-color: var(--babypink);
         position: absolute;
-        top: 60px;
         left: 0;
         width: 100%;
         display: none;
-        padding: 10px 0;
         text-align: center;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li a:hover {
+        color: var(--white);
+        text-decoration: underline;
     }
 
     /* Display navigation links when toggled */
@@ -123,12 +125,11 @@ nav ul li a:hover {
     /* Ensure nav links are full width */
     .nav-links li {
         width: 100%;
-        padding: 10px 0;
     }
 
     .nav-links li a {
         display: block;
-        padding: 15px;
+        padding: 5px;
         color: var(--dark-grey);
     }
 }
