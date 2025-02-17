@@ -119,9 +119,7 @@ header {
     border: none;
     border-top: 2px dotted var(--dark-grey);
     width: 80%;
-    margin: 20px auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin: 40px auto;
 }
 
 .bottom-content {
