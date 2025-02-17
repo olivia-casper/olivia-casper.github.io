@@ -118,7 +118,7 @@ nav ul li a {
 .polaroid-1 { left: 12%; top: 5%; transform: rotate(-8deg); }
 .polaroid-2 { left: 40%; top: 10%; transform: rotate(6deg); }
 .polaroid-3 { left: 70%; top: 15%; transform: rotate(-10deg); }
-.polaroid-4 { left: 30%; top: 55%; transform: rotate(7deg); }
+.polaroid-4 { left: 20%; top: 55%; transform: rotate(7deg); }
 .polaroid-5 { left: 55%; top: 50%; transform: rotate(-5deg); }
 
 
@@ -131,8 +131,8 @@ nav ul li a {
     .polaroid-1 { left: 12%; top: 5%; }
     .polaroid-2 { left: 38%; top: 12%; }
     .polaroid-3 { left: 68%; top: 13%; }
-    .polaroid-4 { left: 28%; top: 50%; }
-    .polaroid-5 { left: 55%; top: 45%; }
+    .polaroid-4 { left: 18%; top: 50%; }
+    .polaroid-5 { left: 55%; top: 60%; }
 }
 
 
@@ -145,8 +145,8 @@ nav ul li a {
     .polaroid-1 { left: 12%; top: 8%; }
     .polaroid-2 { left: 36%; top: 10%; }
     .polaroid-3 { left: 66%; top: 11%; }
-    .polaroid-4 { left: 28%; top: 45%; }
-    .polaroid-5 { left: 55%; top: 45%; }
+    .polaroid-4 { left: 18%; top: 45%; }
+    .polaroid-5 { left: 55%; top: 60%; }
 }
 
 @media (max-width: 600px) {
@@ -158,6 +158,6 @@ nav ul li a {
     .polaroid-1 { left: 7%; top: 5%; }
     .polaroid-2 { left: 35%; top: 8%; }
     .polaroid-3 { left: 65%; top: 9%; }
-    .polaroid-4 { left: 25%; top: 40%; }
-    .polaroid-5 { left: 51%; top: 35%; }
+    .polaroid-4 { left: 15%; top: 40%; }
+    .polaroid-5 { left: 51%; top: 65%; }
 }
