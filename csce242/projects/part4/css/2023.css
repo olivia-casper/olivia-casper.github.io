@@ -10,9 +10,10 @@
 }
 
 .bottom-content img {
-    max-width: 120px;
-    width: 50%;
+    max-width: 200px;
+    width: 100%;
     justify-content: center;
+
 }
 
 .styled-list {
