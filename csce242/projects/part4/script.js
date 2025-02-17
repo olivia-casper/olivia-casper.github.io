@@ -1,14 +1,11 @@
 // Toggle hamburger menu on small screens
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
-    if (menuToggle && navLinks) { 
-        menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-    } else {
-        console.error("Menu toggle button or nav links not found!");
-    }
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 });
+
 
