@@ -1,0 +1,79 @@
+/* Global Styles for Every Page */
+:root {
+    --dark-grey: #333;
+    --med-grey: #c9c9c9;
+    --light-grey: #eee;
+    --white: #fff;
+    --black: #000;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light-grey);
+    color: var(--dark-grey);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.prev, .next {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--dark-grey);
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+}
+
+@media (max-width: 900px) {
+    .pagination {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prev, .next {
+        width: 100%;
+        max-width: 120px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 6 - If Statements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Assignment 6</h1>
+        <h2>If Statements</h2>
+        <!-- Full-screen menu (large screens) -->
+        <nav>
+            <ul id="nav-fullscreen" class="nav-fullscreen">
+                <li onclick="showExercise(1)">Exercise 1</li>
+                <li onclick="showExercise(2)">Exercise 2</li>
+            </ul>
+
+            <!-- Toggle menu (small screens) -->
+            <div class="menu" id="nav-toggle">
+                <span class="toggle-arrow" onclick="toggleMenu()">▼</span>
+                <ul id="nav-items">
+                    <li onclick="showExercise(1)">Exercise 1</li>
+                    <li onclick="showExercise(2)">Exercise 2</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Exercise 1 -->
+    <section id="exercise1" class="hidden">
+        <div class="card">
+            <h3>Traveling</h3>
+            <label for="transportInput">Enter your mode of Transportation</label>
+            <input type="text" id="transportInput" onkeyup="updateImage()">
+            <div id="imageContainer"></div>
+        </div>
+    </section>
+
+    <!-- Exercise 2 -->
+    <section id="exercise2" class="hidden">
+        <div class="card">
+            <h3>Color My Heart</h3>
+            <button onclick="changeColor('red')">Red</button>
+            <button onclick="changeColor('green')">Green</button>
+            <button onclick="changeColor('blue')">Blue</button>
+            <p id="heart">&#10084;</p> <!-- Heart symbol -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

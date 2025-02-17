@@ -1,0 +1,24 @@
+@import "years.css";
+
+.bottom-content {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.bottom-content img {
+    max-width: 150px;
+    width: 40%;
+}
+
+.center-section {
+    padding-top: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.year-container {
+    justify-content: center;
+}

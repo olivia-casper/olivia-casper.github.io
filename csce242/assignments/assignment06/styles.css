@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e8ebe6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4a7478;
+}
+
+h2 {
+    color: #d48888;
+}
+
+/* Full screen nav */
+.nav-fullscreen {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.nav-fullscreen li {
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4a7478;
+}
+
+.nav-fullscreen li:hover {
+    text-decoration: underline;
+}
+
+/* Pipe separator for full screen nav */
+.nav-fullscreen li:not(:last-child)::after {
+    content: " | ";
+    margin-left: 5px;
+}
+
+/* Toggle menu (Hidden by Default on Large Screens) */
+#nav-toggle {
+    display: none;
+}
+
+/* Toggle Menu Items */
+#nav-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#nav-items li {
+    padding: 5px;
+    cursor: pointer;
+    color: #4a7478;
+}
+
+#nav-items li:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: solid 1px #4a7478;
+}
+
+/* Exercise 1 */
+#exercise1 .card {
+    background: black;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#exercise1 h3 {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+#exercise1 label {
+    color: #4a7478; 
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#exercise1 input {
+    padding: 8px;
+    width: 80%;
+    text-align: left;
+    color:#4a7478;
+
+}
+
+#exercise1 #imageContainer img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Exercise 2 */
+#exercise2 .card {
+    background: #faf0d5;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    align-items: left;
+}
+
+#exercise2 h3 {
+    color: #4a7478;
+    text-align: center;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #4a7478;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#heart {
+    font-size: 100px;
+    color: white;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+    body {
+        text-align: left;
+    }
+
+    header {
+        text-align: left;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    .nav-fullscreen {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    #exercise1 .card, #exercise2 .card {
+        margin: 3px;
+    }
+
+    #exercise1 .card {
+        justify-items: center;
+    }
+}
+
+

@@ -152,24 +152,25 @@ header {
 }
 
 
-/* Scaling Instead of Switching to Columns */
-@media (max-width: 1200px) {
-    .year-content {
-        width: 95%;
-        height: 70vh;
-    }
-}
+/* Responsive Scaling */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .year-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side, .center-section {
         width: 90%;
-        height: 65vh;
     }
 }
 
 @media (max-width: 600px) {
     .year-content {
-        width: 85%;
-        height: 60vh;
+        width: 100%;
+    }
+
+    .bottom-content img {
+        width: 90%;
     }
 }
