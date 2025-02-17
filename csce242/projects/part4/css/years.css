@@ -120,18 +120,15 @@ header {
     width: 80%;
 }
 
+
 /* Pagination */
 .pagination {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 30px;
     margin-top: auto;
     bottom: 0;
-    position: relative;
-    overflow-x: hidden;
-    
 }
 
 .prev, .next {
@@ -142,13 +139,10 @@ header {
     color: var(--dark-grey);
 }
 
-.prev {
-    margin-left: 20px;
+.next {
+    margin-right: 60px;
 }
 
-.next {
-    margin-right: 30px;
-}
 
 
 /* Responsive Scaling */
