@@ -5,6 +5,8 @@
     --light-grey: #eee;
     --white: #fff;
     --black: #000;
+    --babypink: #eacbcd;
+    --darkpink: #fb8899;
 }
 
 /* Base Styles */
@@ -38,7 +40,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--white);
+    color: var(--babypink);
     text-decoration: underline;
 }
 
@@ -51,7 +53,7 @@ nav ul li a:hover {
 }
 
 .pagination a {
-    color: var(--black);
+    color: var(--babypink);
     text-decoration: none;
 }
 

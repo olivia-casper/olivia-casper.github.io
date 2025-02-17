@@ -57,7 +57,7 @@ header {
 
 .side {
     width: 25%;
-    background: var(--med-grey);
+    background: var(--darkpink);
     padding: 20px;
     border-radius: 15px 15px 0px 0px;
     display: flex;
@@ -84,7 +84,7 @@ header {
 }
 
 .frame p {
-    background-color: var(--med-grey);
+    background-color: var(--babypink);
     background-size:auto;
 }
 
