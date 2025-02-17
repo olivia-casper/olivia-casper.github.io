@@ -68,6 +68,20 @@ nav ul li a:hover {
     max-width: 150px;
 }
 
+/* Hamburger/Toggle Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--dark-grey);
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1000;
+}
+
 @media (max-width: 900px) {
     .pagination {
         justify-content: center;
@@ -77,5 +91,44 @@ nav ul li a:hover {
     .prev, .next {
         width: 100%;
         max-width: 120px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide navigation links by default */
+    .nav-links {
+        flex-direction: column;
+        background-color: var(--white);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Display navigation links when toggled */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Ensure nav links are full width */
+    .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px;
+        color: var(--dark-grey);
     }
 }
