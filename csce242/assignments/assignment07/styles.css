@@ -33,7 +33,7 @@ button {
     position: relative;
 }
 
-#ladder hr {
+#ladder hr { /* steps */
     width: 100%;
     border: solid black 5px;
     }
@@ -45,7 +45,7 @@ button {
     margin-left: -60px;
     }
 
-.border-inline {
+.border-inline { /* sides */
     border-left: solid black 1rem;
     border-right: solid black 1rem;
 }
