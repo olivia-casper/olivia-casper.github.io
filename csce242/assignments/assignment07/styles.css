@@ -1,8 +1,8 @@
 body {
-    display: grid;
     justify-items: center;
+    display: grid;
+    margin-block-end: 5rem;
     gap: 2rem;
-    margin-block-end: 4rem;
     text-align: center;
 }
 
@@ -13,9 +13,8 @@ body {
 button {
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: transparent;
-    border: 4px solid pink;
-    transition: all 0.4s;
+    border: 5px solid pink;
+    transition: all 0.5s;
 }
 
 #stairs {
