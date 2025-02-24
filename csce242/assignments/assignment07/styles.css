@@ -10,30 +10,33 @@ body {
     display: none;
 }
 
+h1 {
+    text-shadow: 2px 2px 2px pink;
+}
+
 button {
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 5px solid pink;
-    transition: all 0.5s;
 }
 
-#stairs {
-    width: 25ch;
-    padding-block: 1rem;
+#ladder {
     display: grid;
+    width: 200px;
+    padding-block: 1rem;
     gap: 2rem;
     position: relative;
 
     & hr {
-        border: solid black 4px;
         width: 100%;
+        border: solid black 4px;
     }
 
     & img {
         position: absolute;
         bottom: 0;
         left: 50%;
-        translate: -50%;
+        margin-left: -60px;
     }
 }
 

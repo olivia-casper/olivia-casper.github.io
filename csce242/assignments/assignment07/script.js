@@ -5,22 +5,26 @@ const img = document.querySelector("img");
 const climb = document.getElementById("climb-button");
 const draw = document.getElementById("draw-button");
 
-const createStairs = () => {
-    const stairs = document.getElementById("stairs");
-    stairs.classList.add("border-inline");
+//Ladder
+
+const createLadder = () => {
+    const ladder = document.getElementById("ladder");
+    ladder.classList.add("border-inline");
     for (let i = 0; i < steps; ++i) {
         const hr = document.createElement("hr");
-        stairs.append(hr);
+        ladder.append(hr);
     }
   };
 
 draw.onclick = () => {
-    createStairs();
+    createLadder();
     img.classList.remove("hidden");
     climb.classList.remove("hidden");
-
+    //Only click once
     draw.disabled = true;
 };
+
+//Image switches + moves up ladder
 
 let counter = 0;
 let stepsClimbed = 0;
