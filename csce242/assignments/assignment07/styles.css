@@ -45,5 +45,7 @@ button {
     }
 
 .border-inline {
-    border-inline: solid black 1rem;
+    border-left: solid black 1rem;
+    border-right: solid black 1rem;
 }
+    
