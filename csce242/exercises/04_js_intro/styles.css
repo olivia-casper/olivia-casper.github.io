@@ -214,6 +214,16 @@ footer p {
 }
 
 
+
+/* Ladder */
+#ladder-box {
+    height:auto;
+    width: 30px;
+    border-left: black 3px solid;
+    border-right: black 3px solid;
+}
+
+
 /* Medium screens */
 @media only screen and (min-width: 800px) { 
     .columns {

@@ -121,9 +121,10 @@ footer {
     width: 350px;
     margin: 20px auto;
     align-items: left;
+    text-align: left;
 }
 
-#exercise2 h3 {
+#exercise2 .card h3 {
     color: #4a7478;
     text-align: center;
 }
@@ -166,10 +167,6 @@ button {
 
     #nav-toggle {
         display: block;
-    }
-
-    #exercise1 .card, #exercise2 .card {
-        margin: 3px;
     }
 
     #exercise1 .card {
