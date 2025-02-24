@@ -2,26 +2,27 @@ const steps = 10;
 const rate = 31;
 
 const img = document.querySelector("img");
-const climb = document.getElementById("climb-button");
-const draw = document.getElementById("draw-button");
+const climbButton = document.getElementById("climb-button");
+const drawButton = document.getElementById("draw-button");
 
 //Ladder
 
-const createLadder = () => {
+const drawLadder = () => {
     const ladder = document.getElementById("ladder");
     ladder.classList.add("border-inline");
+
     for (let i = 0; i < steps; ++i) {
         const hr = document.createElement("hr");
         ladder.append(hr);
     }
   };
 
-draw.onclick = () => {
-    createLadder();
+drawButton.onclick = () => {
+    drawLadder();
     img.classList.remove("hidden");
-    climb.classList.remove("hidden");
-    //Only click once
-    draw.disabled = true;
+    climbButton.classList.remove("hidden");
+    //Only click "Draw Ladder" once
+    drawButton.disabled = true;
 };
 
 //Image switches + moves up ladder
@@ -43,9 +44,9 @@ const Climb = () => {
     if (stepsClimbed === steps + 1) clearInterval(intervalId);
 };
 
-climb.onclick = () => {
+climbButton.onclick = () => {
     intervalId = setInterval(Climb, 1000);
-
-    climb.disabled = true;
+    //Only click "Climb Ladder"
+    climbButton.disabled = true;
 };
 
