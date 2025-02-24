@@ -1,11 +1,9 @@
-const steps = 10;
-const rate = 31;
+const steps = 10; //10 rungs
+const stepHeight = 31; //how high/fast
 
 const img = document.querySelector("img");
 const climbButton = document.getElementById("climb-button");
 const drawButton = document.getElementById("draw-button");
-
-//Ladder
 
 const drawLadder = () => {
     const ladder = document.getElementById("ladder");
@@ -25,28 +23,28 @@ drawButton.onclick = () => {
     drawButton.disabled = true;
 };
 
-//Image switches + moves up ladder
-
+//Image switches & moves up ladder
 let counter = 0;
 let stepsClimbed = 0;
-let intervalId;
-const array = ["./images/right.png", "./images/left.png"];
+let movementInterval;
 
-const Climb = () => {
-    img.setAttribute("src", array[counter]);
+const images = ["./images/right.png", "./images/left.png"];
+
+const climb = () => {
+    img.setAttribute("src", images[counter]);
     const bottom = Number.parseInt(getComputedStyle(img).bottom);
-    img.style.bottom = `${bottom + rate}px`;
+    img.style.bottom = `${bottom + stepHeight}px`; //31 px heigher each step
 
     ++counter;
     if (counter === 2) counter = 0;
 
     ++stepsClimbed;
-    if (stepsClimbed === steps + 1) clearInterval(intervalId);
+    if (stepsClimbed === steps + 1) clearInterval(movementInterval);
 };
 
 climbButton.onclick = () => {
-    intervalId = setInterval(Climb, 1000);
-    //Only click "Climb Ladder"
+    movementInterval = setInterval(climb, 1000);
+    //Only click "Climb Ladder" once
     climbButton.disabled = true;
 };
 

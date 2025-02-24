@@ -16,29 +16,28 @@ h1 {
 
 button {
     padding: 0.5rem;
-    border-radius: 0.5rem;
     border: 5px solid pink;
+    border-radius: 0.5rem;
 }
 
 #ladder {
     display: grid;
-    width: 200px;
-    padding-block: 1rem;
+    width: 175px;
     gap: 2rem;
     position: relative;
-
-    & hr {
-        width: 100%;
-        border: solid black 4px;
-    }
-
-    & img {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: -60px;
-    }
 }
+
+#ladder hr {
+    width: 100%;
+    border: solid black 5px;
+    }
+
+#ladder img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60px;
+    }
 
 .border-inline {
     border-inline: solid black 1rem;
