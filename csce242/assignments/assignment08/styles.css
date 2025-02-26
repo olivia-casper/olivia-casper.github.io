@@ -12,6 +12,7 @@ h1 {
 h2 {
     color: #b47bd7;
     font-size: 20px;
+    padding-top: 10px;
 }
 
 ul {
@@ -23,12 +24,11 @@ ul li {
     cursor: pointer;
     color: #475f7c;
     margin: 5px 0;
-    transition: color 0.3s;
     padding-top: 10px;
 }
 
 ul li:hover {
-    color: #cebcda;
+    color: #c5add6;
 }
 
 /* Popup Styling */
@@ -74,7 +74,7 @@ ul li:hover {
 
 #image-credit a:hover {
     text-decoration: underline;
-    color: #cebcda;
+    color: #c5add6;
 }
 
 /* Hidden Class */
