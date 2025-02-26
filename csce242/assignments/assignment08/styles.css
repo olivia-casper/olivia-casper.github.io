@@ -31,7 +31,7 @@ ul li:hover {
     color: #c5add6;
 }
 
-/* Popup Styling */
+/* Popup */
 #popup {
     position: fixed;
     top: 50%;
@@ -47,8 +47,8 @@ ul li:hover {
 }
 
 #popup img {
-    max-width: 95%;  /* Adjust width to fit */
-    max-height: 75%; /* Prevents overflow */
+    max-width: 95%; 
+    max-height: 75%; 
     object-fit: contain;
     border-radius: 5px;
 }
@@ -77,7 +77,7 @@ ul li:hover {
     color: #c5add6;
 }
 
-/* Hidden Class */
+/* Hidden */
 .hidden {
     display: none;
 }

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Associative array of titles and image paths
+    //Associative array
     const items = {
         "Happy Birthday": "images/birthday.jpg",
         "Crazy Clown": "images/clown.jpg",
@@ -9,14 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "Work from Home": "images/work.jpg"
     };    
 
-    // Selectors
     const titleList = document.getElementById("titleList");
     const popup = document.getElementById("popup");
     const popupTitle = document.getElementById("popupTitle");
     const popupImage = document.getElementById("popupImage");
     const closeBtn = document.getElementById("close");
 
-    // Populate titles dynamically
+    //Populate Titles 
     Object.keys(items).forEach(title => {
         const li = document.createElement("li");
         li.textContent = title;
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         titleList.appendChild(li);
     });
 
-    // Show popup
     const showPopup = (title, imgSrc) => {
         popupTitle.textContent = title;
         popupImage.src = imgSrc;
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.style.display = "block";
     };
 
-    // Close popup
+    //Close
     closeBtn.addEventListener("click", () => {
         popup.classList.add("hidden");
         popup.style.display = "none";
