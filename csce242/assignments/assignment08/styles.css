@@ -1,0 +1,68 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5ed;
+    color: #5b7b7b;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    color: #d77b7b;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    color: #5b7b7b;
+    margin: 5px 0;
+    transition: color 0.3s;
+    padding-top: 10px;
+}
+
+ul li:hover {
+    color: #d77b7b;
+}
+
+/* Popup Styling */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: #fff8e7;
+    padding: 20px;
+    box-shadow: 8px 8px 4px #d77b7b;
+    text-align: center;
+    display: none;
+}
+
+#popup img {
+    max-width: 95%;  /* Adjust width to fit */
+    max-height: 75%; /* Prevents overflow */
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #d77b7b;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
