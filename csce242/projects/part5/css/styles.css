@@ -1,0 +1,135 @@
+:root {
+    --dark-grey: #333;
+    --med-grey: #c9c9c9;
+    --light-grey: #eee;
+    --white: #fff;
+    --black: #000;
+    --babypink: #eacbcd;
+    --darkpink: #fb8899;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light-grey);
+    color: var(--dark-grey);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--babypink);
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    color: var(--babypink);
+    text-decoration: none;
+}
+
+.prev, .next {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--dark-grey);
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Hamburger/Toggle Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    border: none;
+    color: var(--darkpink);
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 2000;
+}
+
+@media (max-width: 900px) {
+    .pagination {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prev, .next {
+        width: 100%;
+        max-width: 120px;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide navigation links by default */
+    .nav-links {
+        flex-direction: column;
+        background-color: #eacbcdce;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1999;
+        top: 20px;
+    }
+
+    .nav-links li a:hover {
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+    /* Display navigation links when toggled */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 5px;
+        color: var(--dark-grey);
+    }
+}
