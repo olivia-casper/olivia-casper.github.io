@@ -16,14 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    // Toggle navigation menu
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-
     const loadFashionTrends = async () => {
         const url = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json"; // Replace with actual GitHub URL
     
