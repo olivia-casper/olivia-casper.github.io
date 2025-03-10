@@ -11,48 +11,58 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".heart").forEach(heart => {
         heart.addEventListener("click", () => {
             heart.classList.toggle("liked");
-            heart.textContent = heart.classList.contains("liked") ? "♥" : "♡"; // Toggle between outline and filled heart
+            heart.textContent = heart.classList.contains("liked") ? "♥" : "♡"; 
         });
     });
 });
 
-    const currentYear = parseInt(document.body.getAttribute("data-year")); // Get the current year from the page
-    const jsonUrl = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json";
+const getFashionTrends = async () => {
+    const url = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json";
 
-    fetch(jsonUrl)
-        .then(response => response.json())
-        .then(data => {
-            console.log("JSON Data Loaded:", data);
-            const yearData = data.find(item => item.year === currentYear);
-            if (yearData) {
-                populateYearPage(yearData);
-            } else {
-                console.error("No data found for this year.");
-            }
-        })
-        .catch(error => console.error("Fetch Error:", error));
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.log("Error fetching fashion trends:", error);
+    }
+};
 
+const showFashionTrends = async () => {
+    const trends = await getFashionTrends();
+    const currentYear = parseInt(document.body.getAttribute("data-year"));
+    
+    if (!trends) {
+        console.error("No fashion trends data found.");
+        return;
+    }
 
-const populateYearPage = (yearData) => {
+    const yearData = trends.find(item => item.year === currentYear);
+
+    if (!yearData) {
+        console.error(`No data found for year: ${currentYear}`);
+        return;
+    }
+
+    // Update Title
     document.querySelector("h1").textContent = `${yearData.year} Fashion Trends`;
 
-    // Update top description
+    // Update Top Description
     document.querySelector(".center-section p").textContent = yearData["top-description"];
 
-    // Update bottom content if available
+    // Update Bottom Content
     const bottomText = document.querySelector(".bottom-content p");
     if (bottomText && yearData["bottom-text"]) {
         bottomText.textContent = yearData["bottom-text"];
     }
 
-    // Update main image if it exists
+    // Update Main Image
     const bottomImageContainer = document.querySelector(".bottom-content img");
     if (bottomImageContainer && yearData["main-image"]) {
         bottomImageContainer.src = `images/${yearData["main-image"]}`;
         bottomImageContainer.alt = `Main fashion trend visualization for ${yearData.year}`;
     }
 
-    // Populate the left and right sections with images
+    // Populate Left & Right Sections
     const leftSide = document.querySelector(".side.left");
     const rightSide = document.querySelector(".side.right");
 
@@ -61,8 +71,8 @@ const populateYearPage = (yearData) => {
         rightSide.innerHTML = "";
 
         yearData.images.forEach((imageData, index) => {
-            const frame = document.createElement("div");
-            frame.classList.add("frame");
+            const section = document.createElement("div");
+            section.classList.add("frame");
 
             const img = document.createElement("img");
             img.src = `images/${imageData.src}`;
@@ -71,15 +81,18 @@ const populateYearPage = (yearData) => {
             const caption = document.createElement("p");
             caption.textContent = imageData.title;
 
-            frame.appendChild(img);
-            frame.appendChild(caption);
+            section.appendChild(img);
+            section.appendChild(caption);
 
-            // Distribute images evenly between left and right sides
+            // Alternate between left and right sections
             if (index % 2 === 0) {
-                leftSide.appendChild(frame);
+                leftSide.appendChild(section);
             } else {
-                rightSide.appendChild(frame);
+                rightSide.appendChild(section);
             }
         });
     }
 };
+
+// Call function to display fashion trends on page load
+showFashionTrends();
