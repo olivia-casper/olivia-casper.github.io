@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// JSON URL 
 const getFashionTrends = async () => {
     const url = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json";
 
@@ -43,26 +44,26 @@ const showFashionTrends = async () => {
         return;
     }
 
-    // Update Title
+    // Title
     document.querySelector("h1").textContent = `${yearData.year} Fashion Trends`;
 
-    // Update Top Description
+    // Top Description
     document.querySelector(".center-section p").textContent = yearData["top-description"];
 
-    // Update Bottom Content
+    // Bottom Content
     const bottomText = document.querySelector(".bottom-content p");
     if (bottomText && yearData["bottom-text"]) {
         bottomText.textContent = yearData["bottom-text"];
     }
 
-    // Update Main Image
+    // Main Image
     const bottomImageContainer = document.querySelector(".bottom-content img");
     if (bottomImageContainer && yearData["main-image"]) {
         bottomImageContainer.src = `images/${yearData["main-image"]}`;
         bottomImageContainer.alt = `Main fashion trend visualization for ${yearData.year}`;
     }
 
-    // Populate Left & Right Sections
+    // Left & Right Sections
     const leftSide = document.querySelector(".side.left");
     const rightSide = document.querySelector(".side.right");
 
@@ -94,5 +95,5 @@ const showFashionTrends = async () => {
     }
 };
 
-// Call function to display fashion trends on page load
+// Display fashion trends when page loads
 showFashionTrends();
