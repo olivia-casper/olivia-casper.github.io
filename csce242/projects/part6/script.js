@@ -16,73 +16,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-    const loadFashionTrends = async () => {
-        const url = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json"; // Replace with actual GitHub URL
-    
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error("Network response was not ok");
-    
-            const data = await response.json();
-            console.log("Fetched JSON Data:", data); 
-    
-            // Extract the current year from the file name
-            const currentPage = window.location.pathname.split("/").pop();
-            console.log("Current Page:", currentPage); // Debugging
-    
-            const yearMatch = currentPage.match(/\d{4}/); // Extracts a four-digit year
-            const year = yearMatch ? parseInt(yearMatch[0]) : null;
-            console.log("Extracted Year:", year); // Debugging
-    
-            if (!year) {
-                console.error("Could not determine year from URL");
-                return;
+    const currentYear = parseInt(document.body.getAttribute("data-year")); // Get the current year from the page
+    const jsonUrl = "https://olivia-casper.github.io/csce242/projects/part6/fashion_trends.json";
+
+    fetch(jsonUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log("JSON Data Loaded:", data);
+            const yearData = data.find(item => item.year === currentYear);
+            if (yearData) {
+                populateYearPage(yearData);
+            } else {
+                console.error("No data found for this year.");
             }
-    
-            // Find matching year data
-            const yearData = data.find(item => item.year === year);
-            console.log("Year Data:", yearData); // Debugging
-    
-            if (!yearData) {
-                console.error("Year data not found for:", year);
-                return;
+        })
+        .catch(error => console.error("Fetch Error:", error));
+
+
+const populateYearPage = (yearData) => {
+    document.querySelector("h1").textContent = `${yearData.year} Fashion Trends`;
+
+    // Update top description
+    document.querySelector(".center-section p").textContent = yearData["top-description"];
+
+    // Update bottom content if available
+    const bottomText = document.querySelector(".bottom-content p");
+    if (bottomText && yearData["bottom-text"]) {
+        bottomText.textContent = yearData["bottom-text"];
+    }
+
+    // Update main image if it exists
+    const bottomImageContainer = document.querySelector(".bottom-content img");
+    if (bottomImageContainer && yearData["main-image"]) {
+        bottomImageContainer.src = `images/${yearData["main-image"]}`;
+        bottomImageContainer.alt = `Main fashion trend visualization for ${yearData.year}`;
+    }
+
+    // Populate the left and right sections with images
+    const leftSide = document.querySelector(".side.left");
+    const rightSide = document.querySelector(".side.right");
+
+    if (leftSide && rightSide) {
+        leftSide.innerHTML = "";
+        rightSide.innerHTML = "";
+
+        yearData.images.forEach((imageData, index) => {
+            const frame = document.createElement("div");
+            frame.classList.add("frame");
+
+            const img = document.createElement("img");
+            img.src = `images/${imageData.src}`;
+            img.alt = imageData.title;
+
+            const caption = document.createElement("p");
+            caption.textContent = imageData.title;
+
+            frame.appendChild(img);
+            frame.appendChild(caption);
+
+            // Distribute images evenly between left and right sides
+            if (index % 2 === 0) {
+                leftSide.appendChild(frame);
+            } else {
+                rightSide.appendChild(frame);
             }
-    
-            // Select div where JSON content will be injected
-            const contentDiv = document.getElementById("fashion-content");
-    
-            // Construct the content
-            let contentHTML = `<p>${yearData["top-description"]}</p><hr class="dotted">`;
-    
-            if (yearData["main-image"]) {
-                contentHTML += `<div class="bottom-content"><img src="images/${yearData["main-image"]}" alt="Main Image"></div>`;
-            }
-    
-            contentHTML += `<div class="year-content">`;
-            yearData.images.forEach(image => {
-                contentHTML += `
-                    <div class="side">
-                        <div class="frame">
-                            <img src="images/${image.src}" alt="${image.title}">
-                            <p>${image.title}</p>
-                        </div>
-                    </div>
-                `;
-            });
-    
-            contentHTML += `</div>`;
-    
-            if (yearData["bottom-text"]) {
-                contentHTML += `<p>${yearData["bottom-text"]}</p>`;
-            }
-    
-            contentDiv.innerHTML = contentHTML;
-    
-        } catch (error) {
-            console.error("Error loading fashion trends:", error);
-        }
-    };
-    
-    // Load JSON 
-    document.addEventListener("DOMContentLoaded", loadFashionTrends);
-    
+        });
+    }
+};
