@@ -12,6 +12,10 @@ body {
     bottom: 0;
 }
 
+.nav-links {
+    padding-bottom: 0px;
+}
+
 nav ul li a {
     color: var(--dark-grey);
 }
@@ -59,12 +63,13 @@ nav ul li a {
     height: 700px; 
     justify-self: auto;
     padding-top: 0;
+    margin-top: -20px;
 
 }
 
 .predictions-container h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 36px;
+    font-size: 30px;
     padding-top: 0;
 }
 

@@ -45,7 +45,7 @@ const showFashionTrends = async () => {
     }
 
     // Title
-    document.querySelector("h1").textContent = `${yearData.year} Fashion Trends`;
+    document.querySelector(".year-container h1").textContent = `${yearData.year} Fashion Trends`;
 
     // Top Description
     document.querySelector(".center-section p").textContent = yearData["top-description"];
