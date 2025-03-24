@@ -116,18 +116,20 @@ nav ul li a {
     display: block;
 }
 
-/* Heart Icon - Filled when clicked */
+/* Heart Icon */
 .heart {
     font-size: 1vw;
     color: var(--white);
     margin-left: 5px;
     text-align: left;
+    cursor: pointer;
 }
 
 /* Change color to black when liked */
 .heart.liked {
     color: var(--black);
     font-size: 1.5vw;
+    cursor: pointer;
 }
 
 /* Staggered Polaroid Positioning */
