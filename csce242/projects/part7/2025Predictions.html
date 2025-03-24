@@ -78,15 +78,23 @@
 </div>
 
 <section class="contact-form">
-    <h3>Have any comments or suggestions? Email me!</h3>
-    <form id="contactForm">
+    <h3>Have any comments or suggestions? Email us!</h3>
+  
+    <form method="POST" id="form">
+      <input type="hidden" name="access_key" value="3f2bdbe4-ff60-4d3c-8806-eb6ba785e48a">
+  
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
+  
+      <!-- Bot check field (anti-spam) -->
+      <input type="checkbox" name="botcheck" style="display: none;" class="hidden">
+  
       <button type="submit">Send</button>
-      <p id="formResponse"></p>
+      <div id="result"></div>
     </form>
   </section>
+  
   
 <div class="pagination">
     <div class="prev">

@@ -100,20 +100,43 @@ showFashionTrends();
 
 
 //Contact Me Form
-const form = document.getElementById("contactForm");
-  form?.addEventListener("submit", async (e) => {
+const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form?.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
-    const responseMsg = document.getElementById("formResponse");
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
 
-    try {
-      // Simulate async submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      form.reset();
-      responseMsg.textContent = "Message sent successfully!";
-      responseMsg.style.color = "grey";
-    } catch (err) {
-      responseMsg.textContent = "Something went wrong. Try again later.";
-      responseMsg.style.color = "red";
-    }
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status === 200) {
+          result.innerHTML = "Form submitted successfully!";
+          result.style.color = "grey";
+        } else {
+          result.innerHTML = json.message || "Something went wrong!";
+          result.style.color = "red";
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        result.innerHTML = "Something went wrong!";
+        result.style.color = "red";
+      })
+      .finally(() => {
+        form.reset();
+        setTimeout(() => {
+          result.innerHTML = "";
+        }, 3000);
+      });
   });

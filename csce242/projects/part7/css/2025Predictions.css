@@ -137,12 +137,12 @@ nav ul li a {
 .polaroid-4 { left: 20%; top: 55%; transform: rotate(7deg); }
 .polaroid-5 { left: 55%; top: 50%; transform: rotate(-5deg); }
 
-
+/* Contact Form */
 .contact-form {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #f2dcded2;
+    background-color: var(--light-grey);
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -150,6 +150,8 @@ nav ul li a {
   .contact-form h3 {
     text-align: center;
     margin-bottom: 15px;
+    color: rgb(70, 70, 70);
+    font-size: 16px;
   }
   
   .contact-form form {
@@ -158,10 +160,13 @@ nav ul li a {
     gap: 10px;
   }
   
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     padding: 10px;
     border: 1px solid var(--med-grey);
     border-radius: 5px;
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .contact-form button {
@@ -171,10 +176,13 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
   }
   
-  #formResponse {
+  #result {
     text-align: center;
+    font-style: italic;
+    color: var(--dark-grey);
   }
   
 @media (max-width: 1200px) {
