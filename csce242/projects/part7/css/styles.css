@@ -68,7 +68,7 @@ nav ul li a:hover {
 
 .prev, .next {
     background: var(--white);
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     font-weight: bold;
     color: var(--dark-grey);
