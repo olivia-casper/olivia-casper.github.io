@@ -181,7 +181,7 @@ header {
 /* Responsiveness */
 @media (min-width: 900px) {
     .year-content {
-        align-items: stretch; /* Forces equal height */
+        align-items: stretch; 
     }
 }
 
