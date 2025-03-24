@@ -5,7 +5,7 @@
     "main-image":"2020graph5.png",
     "images":[
         {
-            "src":"prints.png",
+            "src":"prints.jpg",
             "title":"Fun Prints"
         },
         {
@@ -35,7 +35,7 @@
             "title":"Corsets"
         },
         {
-            "src":"lowrise.",
+            "src":"lowrise.jpeg",
             "title":"Low-rise Jeans"
         },
         {
@@ -43,7 +43,7 @@
             "title":"Bold Colors & Accessories"
         },
         {
-            "src":"Loungewear.jpeg",
+            "src":"loungewear.jpeg",
             "title":"Sweat Sets"
         }
         
@@ -125,11 +125,4 @@
         }
         
     ]
-}
-
-
-
-
-
-
-]
+}]
