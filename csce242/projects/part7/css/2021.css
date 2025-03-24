@@ -1,0 +1,9 @@
+@import "years.css";
+
+.bottom-content {
+    text-align: center;   
+    display: flex;
+    flex-direction: column;
+}
+
+
